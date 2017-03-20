@@ -6,8 +6,4 @@ Bowen, Haoran, Songda, Tong.
 
 # This project is based on scrum.
 
-# pushed by Jenny
-
-# pushed by Haoran
-
-# pushed by Songda
+#The xxxx diagram is at URL: https://www.draw.io/#G0B9mUD6sArHDxVUYzSHBNeXNyWjQ
