@@ -8,6 +8,7 @@ Bowen, Haoran, Songda, Tong.
 
 # By Haoran
 The ER diagram is at URL: https://www.draw.io/#G0B9mUD6sArHDxVUYzSHBNeXNyWjQ
+The Use-Case Diagram at URL: https://www.draw.io/#G0B9mUD6sArHDxOV9KLXhuaVhidjA
 
 The Usecase diagram is at URL:
 
