@@ -1,0 +1,41 @@
+#Customer Requirement Documentation
+#Author: Songda Cheng
+
+1-Log in interface
+  -New users register
+  -Username and password type in
+  -Forgot your password?
+2-Basic Function: (Advanced) search£¨with keywords£©
+  -First name
+  -Last name
+  -current(latest) working title
+  -previous working title
+  -current(latest) working field
+  -previous working field
+  -living area
+  -US citizen?
+  -Degree(Highest)
+  -Undergraduate Year
+  -LinkedIn (or equivalent websites) Profile URL access
+3-The most matched resume appeared at the top of the list after the keyword searching, rest of them appearing in descending order
+4-Document output format
+  -PDF
+  -DOC
+  -DOCX
+  -ODT
+5-Download interface
+
+Extra:
+Provide Username and password and press the "Log In" tab to log in
+
+Upload resumes by browsing documents from local computer and selecting documents from local documents
+
+The local browsing will automatically filter documents with other formats than .doc, .docx and .pdf
+
+Search by choosing keywords from tabs (keywords includes working fields), first names, last names, etc
+
+Multiple choices for viewing the resume: view it online, download it (which will direct users to the downloading interface), mark it for future viewing
+
+# Applicants should have the clearance of uploading their files and checking their uploading status    -- 03/21/2017 10:25
+
+#
