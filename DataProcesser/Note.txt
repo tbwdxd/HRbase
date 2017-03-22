@@ -6,4 +6,15 @@ Version:0.1
 
 #Environment Set-up
 
+If I have installed both python2 and python3, how to use pip?
+
+当Python2和Python3同时存在于windows上时，它们对应的pip都叫pip.exe，所以不能够直接使用 pip install 命令来安装软件包。而是要使用启动器py.exe来指定pip的版本。
+windows
+命令如下：py -2 -m pip install XXXX-2 还是表示使用 Python2，-m pip 表示运行 pip 模块，也就是运行pip命令了。如果是为Python3安装软件，那么命令类似的变成py -3 -m pip install XXXX
+linux
+sudo pip2 install sth
+sudo pip3 install sth
+
+
+
 #Test Cases
