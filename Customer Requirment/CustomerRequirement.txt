@@ -58,3 +58,8 @@ Multiple choices for viewing the resume: view it online, download it (which will
   -Fly-by-wire
   -Software development
   -Safety
+
+# name is a link, to the resume. Informaiton shows In this order: major, highest degree, latest graduated from, undergraduate graduation year.
+
+# At the very last of the tab, shows the resunme links to view it online, download interface, and mark.
+ 
