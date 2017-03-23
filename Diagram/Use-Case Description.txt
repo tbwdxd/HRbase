@@ -1,0 +1,17 @@
+1.Register System: User account register
+
+2.Login System: Type in account and password to access Database
+
+3.Account Management: permission control. Different account have different permission. Such as PM/HR have Download, upload, search, label, review funcion.
+                      Applicant only have upload function.
+
+4.Download Files: Download resume from database
+
+5.Upload Files: Upload reseme to database
+
+6.Searching System: search key word and return a list of result.The most matched resume appeared at the top of the list after the keyword searching, rest of 
+                    them appearing in descending order.
+
+7.Label Data: label specific files that you want to review later, or label the files that you most interested.
+
+8.Review Data: Review resume. 
