@@ -71,8 +71,7 @@ Multiple choices for viewing the resume: view it online, download it (which will
   -cant be blank
   -First name(type)
   -Last name(type)
-  -current(latest) working title(type)
-  -previous working title(type)
+  -Position(Type)
   -current(latest) working field(need tab to select from existing keywords)
   -previous working field(same as current working field)
   -living area(type)
