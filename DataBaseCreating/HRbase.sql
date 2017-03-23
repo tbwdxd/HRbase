@@ -1,5 +1,5 @@
-# Date: 2017年3月22日
-# Author： 马浩然
+# Date: 2017/3/22
+# Author：M oran Ma
 # Description： 创建三个表，分别是Talent， Company， Employment_History
 
 CREATE DATABASE HRbase;
