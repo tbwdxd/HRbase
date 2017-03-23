@@ -59,7 +59,11 @@ Multiple choices for viewing the resume: view it online, download it (which will
   -Software development
   -Safety
 
-# name is a link, to the resume. Informaiton shows In this order: major, highest degree, latest graduated from.
+# name is a link, to the resume. Informaiton shows In this order: major, highest degree, latest graduated from, undergraduate graduation year.
 
 # At the very last of the tab, shows the resunme links to view it online, download interface, and mark.
+
+# Location, Resume Sourcce, Submission Date
+
+# Submission date can roughly be Sep. 2016
  
