@@ -38,4 +38,23 @@ Multiple choices for viewing the resume: view it online, download it (which will
 
 # Applicants should have the clearance of uploading their files and checking their uploading status    -- 03/21/2017 10:25
 
-#
+
+# Searching Keywords List:
+  -Aerospace
+  -Engine
+  -Project Management
+  -Avionics
+  -System Development
+  -Hydraulic
+  -Landing Gear
+  -Fuel System
+  -Wheel and brakes
+  -Model Design
+  -Stress Analysis
+  -Interior
+  -System design
+  -Inerting
+  -Flight Control
+  -Fly-by-wire
+  -Software development
+  -Safety
