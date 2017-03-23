@@ -1,12 +1,12 @@
-Software Engineer
-Java
-Electrical Engineering
-HTML
-System Engineer
-Mechanical Engineering
-Python
-DOORS
-team player
-Chemistry
-Tomatoes
-League of Legends
+Software Engineer 2
+Java 2
+Electrical Engineering 1
+HTML 1
+System Engineer 0
+Mechanical Engineering 0
+Python 0
+DOORS 0
+team player 1
+Chemistry 0
+Tomatoes 0
+League of Legends 0
