@@ -1,3 +1,7 @@
+#Updated on March 23th, 2017
+#Author: Haoran Ma
+#Description: Input some values for test + Test Case 
+
 USE HRbase;
 
 # Insert Value in 'Talent' table
