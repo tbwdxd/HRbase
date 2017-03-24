@@ -1,0 +1,7 @@
+import textract
+def main():
+f = open('Keyword List test.txt');s
+
+
+if __name__ == '__main__':
+ main()

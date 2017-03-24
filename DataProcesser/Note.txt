@@ -1,10 +1,15 @@
 #Note - Data Processor for HRbase
 #Author: Tong(Jenny)
 #Last Modified:03/22/2017
+#Platform: Python 3
 #Version:0.1
 
+#Files:
+	1.xxxx.py  # for something - main program   >> main.py
+	2.xxxx.py  # it is just a small test        >> test.py
+	3.xxxx.py  # it is just for testing some functions, will remove
 
-#Environment Setup
+#Github Instruction
 1.Instruction for using github
 procedure to push update on github
 current directory should be at the github project folder
@@ -12,6 +17,9 @@ a.git pull
 b.git commit -a -m “comment”
 c.git push
 
+#Environment Setup
+
+#How to setup library for only Python 3 on Mac
 2.If I have installed both python2 and python3, how to use pip?
 当Python2和Python3同时存在于windows上时，它们对应的pip都叫pip.exe，所以不能够直接使用 pip install 命令来安装软件包。而是要使用启动器py.exe来指定pip的版本。
 windows
@@ -20,7 +28,13 @@ linux
 sudo pip2 install sth
 sudo pip3 install sth
 
-3.安装library详见 https://github.com/deanmalmgren/textract documentation
+3.Reference: https://github.com/deanmalmgren/textract documentation
+
+1
+2
+3
+4
 
 
-#Test Cases
+#Use Case:
+Command Line: test.py [Arg1 Arg2]
