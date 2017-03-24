@@ -109,3 +109,5 @@ Multiple choices for viewing the resume: view it online, download it (which will
     -Gender
     -Living Area
     -Password
+
+# Add an optio to the resume viewing part, to show the resume's vewing status(only to the internal users)(optional)
