@@ -9,6 +9,7 @@ def main():
 	dict = ["software engineer","Java","Electrical Engineering","HTML","System Engineer","Mechanical Engineering","Python","DOORS","team player","Chemistry","Tomatoes","League of Legends"]
 #count store the matching words and their matching times
 	count = {}#count is a dictionary
+	counttime = 0
 	for word in split:
 		for keyword in dict:
 			tempkeyword = keyword.split() #tempkeyword is a list
@@ -20,10 +21,15 @@ def main():
 				#see if index[n]
 				for index in (0, len(tempkeyword) - 1):
 					if tempkeyword[index] == word:
+						counttime += 1
+						print (tempkeyword[index]," >>>>>>>> ", word)
 						if keyword not in count:
 							count[keyword] = 1
-						else:
-							count[keyword] += 1
+					
+					else: 
+						 continue
+
+					count[keyword] += 1
 			#if the keyword is a single word
 			else:
 				if word == keyword:
