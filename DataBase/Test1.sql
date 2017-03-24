@@ -4,19 +4,52 @@
 
 USE HRbase;
 
+# Insert Value in 'User' table
+# Permission number: 0->Admin, 1->Employee, 2->User
+INSERT INTO User 
+(EMail, Password, Permission)
+VALUES
+('haoranma@gmail.com','12345','1'),
+('bowentian@gmail.com','12345','0'),
+('songdacheng@gmail.com','12345','1'),
+('tongzhang@gmail.com','12345','1'),
+('apple@gmail.com','12345','2'),
+('jack@gmail.com','12345','2'),
+('tom@gmail.com','12345','2'),
+('kay@gmail.com','12345','2');
+
+
 # Insert Value in 'Talent' table
 INSERT INTO Talent 
-(LastName, FirstName, Age, LivingArea, CellPhone, EMail, Major, Degree, GraduteSchool, 
-Citizen, SubmissionDate, Source, LinkedIn, ResumeLocation, Note) 
+(PersonID, LastName, FirstName, Age, LivingArea, CellPhone, DirectPhone, Major, HighestDegree, GraduteSchool, 
+	Citizen, SubmissionDate, Source, LinkedIn, ResumeLocation,  KeyWord)
 VALUES 
-("Ma", "Haoran", 25, "California", "626-478-5299","haoranma0101@gmail.com", "Electrical Engineering", "PhD", "Standford", "Yes", 
-	"2016-6-1", "","","","Good"),
-("Tian", "Bowen", 27, "California", "","tianbowen@gmail.com", "Computer Science","PhD", "Harvard", "Yes", "2016-6-1", "","","","Good"),
-("Zhang", "Tong", 25, "California", "","zhangtong@gmail.com", "Electrical Engineering","PhD", "MIT", "Yes", "2016-6-1", "","","","Good"),
-("Cheng", "Songda", 24, "California", "","chengsongda@gmail.com", "Chemistry","PhD", "UCB", "Yes", "2016-6-1", "","","","Good");
-# In table 'talent', there is one problem need to be concerned. We cannot distinguish duplicate since no unique information.
-# I try to use EMail as UniquKey but system treat null information as duplicate. Therefore, we need to control duplication
-# somewhere in the system later.
+(1, "A", "Apple", 25, "California", "626-478-5299","","Electrical Engineering", "PhD", "Standford", "Yes", 
+	"2016-6-1", "Internal","","","Electrical, Engineering, System Engineering"),
+(2, "B", "Jack", 27, "California", "","","Computer Science", "PhD", "Standford", "Yes", 
+	"2016-6-1", "Internal","","","Computer Science, Java, Python"),
+(3, "C", "Tom", 24, "California", "","","Chemistry", "PhD", "Standford", "Yes", 
+	"2016-6-1", "Internal","","","Chemistry, Requirement Analysis"),
+(4, "D", "Kay", 25, "California", "","","Electrical Engineering", "PhD", "Standford", "Yes", 
+	"2016-6-1", "Internal","","","Electrical Engineering, Machine Learning");
+
+# Insert Value in 'Employee' table
+INSERT INTO Employee 
+(PersonID, Department, WorkPhone, Position)
+VALUES
+(1, 'Engineering&Project Management','949-255-4190','Director'),
+(2, 'Engineering&Project Management','949-255-2262','Director'),
+(3, 'Engineering&Project Management','949-255-4197','Director'),
+(4, 'Engineering&Project Management','949-255-4159','Director');
+
+# Insert Value in 'Comments' table
+INSERT INTO Comments 
+(PersonID, Comments)
+VALUES
+(5, 'Good'),
+(6, 'Not Good'),
+(7, 'Not Good Enough'),
+(8, 'Good Enough');
 
 # Insert Value in 'Company' table
 INSERT INTO Company (CompanyID, CompanyName, CompanyInf) 
@@ -27,12 +60,12 @@ VALUES
 (4, "Google", "MM");
 
 # Insert Value in 'Employment_History' table
-INSERT INTO Employment_History (EmploymentID, PersonID, CompanyID, JobField, Position, StartDate, EndDate, JobExp)
+INSERT INTO Employment_History (EmploymentID, PersonID, CompanyID, WorkingField, Position, StartDate, EndDate, JobExp)
 VALUES 
-(1,1,1,"EE","Intern","2016-5-19","2017-5-19","No"),
-(2,2,2,"CS","Intern","2016-5-19","2017-5-19","No"),
-(3,3,3,"CE","Intern","2016-5-19","2017-5-19","No"),
-(4,4,4,"EE","Intern","2016-5-19","2017-5-19","No");
+(1,5,1,"EE","Director","2016-5-19","2017-5-19","No"),
+(2,6,2,"CS","Director","2016-5-19","2017-5-19","No"),
+(3,7,3,"CE","Director","2016-5-19","2017-5-19","No"),
+(4,8,4,"EE","Director","2016-5-19","2017-5-19","No");
 
 #Test Case:
 #1. Query Haoran's personal information
