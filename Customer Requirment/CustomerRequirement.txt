@@ -90,4 +90,22 @@ Multiple choices for viewing the resume: view it online, download it (which will
 
 # Add clearance: Resume management
 
-#
+# Register System information details
+  -Internal(COMAC) Users
+    -First name
+    -Last Name
+    -Passowrd
+    -Email address
+    -Department
+    -Position
+    -Work Phone
+    -Permission(depends on administrator)(admin will offer the appropriate permission to specific users)
+  -External Users
+    -First name
+    -last name
+    -Email Address
+    -Direct Phone No.
+    -Cell Phone No.
+    -Gender
+    -Living Area
+    -Password
