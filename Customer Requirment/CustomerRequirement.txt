@@ -78,5 +78,16 @@ Multiple choices for viewing the resume: view it online, download it (which will
   -Degree(select form tabs)
   -Marked documents showed on the top
   -Source(select from tab)
-  -Submission date(select from tab)
-  -
+  -Submission date(select from tab)         -- 03/23/2017  17:25
+
+# Leave online comments for specific resumes
+
+# Give clearance for PM or HR department to add more keywords when they find the keyword library is not sufficient.
+
+# Add clearance: Information Management
+
+# Add clearance for HR department to manage the resume after a certain time period: Eg. when finding duplicated resumes they should be able to delete it. 
+
+# Add clearance: Resume management
+
+#
