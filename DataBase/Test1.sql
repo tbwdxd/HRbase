@@ -24,13 +24,13 @@ INSERT INTO Talent
 (PersonID, LastName, FirstName, Age, LivingArea, CellPhone, DirectPhone, Major, HighestDegree, GraduteSchool, 
 	Citizen, SubmissionDate, Source, LinkedIn, ResumeLocation,  KeyWord)
 VALUES 
-(1, "A", "Apple", 25, "California", "626-478-5299","","Electrical Engineering", "PhD", "Standford", "Yes", 
+(5, "A", "Apple", 25, "California", "626-478-5299","","Electrical Engineering", "PhD", "Standford", "Yes", 
 	"2016-6-1", "Internal","","","Electrical, Engineering, System Engineering"),
-(2, "B", "Jack", 27, "California", "","","Computer Science", "PhD", "Standford", "Yes", 
+(6, "B", "Jack", 27, "California", "","","Computer Science", "PhD", "Standford", "Yes", 
 	"2016-6-1", "Internal","","","Computer Science, Java, Python"),
-(3, "C", "Tom", 24, "California", "","","Chemistry", "PhD", "Standford", "Yes", 
+(7, "C", "Tom", 24, "California", "","","Chemistry", "PhD", "Standford", "Yes", 
 	"2016-6-1", "Internal","","","Chemistry, Requirement Analysis"),
-(4, "D", "Kay", 25, "California", "","","Electrical Engineering", "PhD", "Standford", "Yes", 
+(8, "D", "Kay", 25, "California", "","","Electrical Engineering", "PhD", "Standford", "Yes", 
 	"2016-6-1", "Internal","","","Electrical Engineering, Machine Learning");
 
 # Insert Value in 'Employee' table
@@ -68,28 +68,30 @@ VALUES
 (4,8,4,"EE","Director","2016-5-19","2017-5-19","No");
 
 #Test Case:
-#1. Query Haoran's personal information
-Select LastName, FirstName, Age, CellPhone, EMail, Major, Degree 
-from Talent where FirstName = 'Haoran';
+#1. Verify Haoran Login and password
+Select EMail, Password, Permission from User where EMail = 'haoranma@gmail.com';
 
-#2. Query Haoran's Employment History (Include Person ID, Job Field, Position, Start Day and End Day)
-Select Talent.LastName, Talent.FirstName, Employment_History.PersonID, Employment_History.JobField, Employment_History.Position,
+#2. Query Tom's personal information
+Select LastName, FirstName, Age, Major, HighestDegree, GraduteSchool 
+from Talent where FirstName = 'Tom';
+
+#2. Query Tom's Employment History (Include Working Field, Position, Start Day and End Day)
+Select Talent.LastName, Talent.FirstName, Employment_History.WorkingField, Employment_History.Position,
 Employment_History.StartDate, Employment_History.EndDate
- from Talent inner join Employment_History on Talent.PersonID = Employment_History.PersonID where Talent.FirstName = 'Haoran';
+ from Talent inner join Employment_History on Talent.PersonID = Employment_History.PersonID where Talent.FirstName = 'Tom';
 
-#3. Query Haoran's Detail (Include Person ID, Job Field, Position, Start Day, End Day, Company Name and Comapny information)
-Select Talent.LastName, Talent.FirstName, Employment_History.PersonID, Employment_History.JobField, Employment_History.Position,
+#3. Query Tom's Detail (Include Person ID, Working Field, Position, Start Day, End Day, Company Name and Comapny information)
+Select Talent.LastName, Talent.FirstName, Employment_History.WorkingField, Employment_History.Position,
 Employment_History.StartDate, Employment_History.EndDate, Company.CompanyName, Company.CompanyInf
 from Employment_History 
 inner join Talent on Talent.PersonID = Employment_History.PersonID
 inner join Company on Company.CompanyID = Employment_History.CompanyID
-where Talent.FirstName = 'Haoran';
+where Talent.FirstName = 'Tom';
+
+#4 Query Tom's Comments
+Select Talent.FirstName, Talent.LastName, Comments.Comments from Talent 
+inner join Comments on Talent.PersonID = Comments.PersonID
+where Talent.FirstName = 'Tom';
 
 
 # SD require to test:
-# Informaiton shows In this order: major, highest degree, latest graduated from.
-Select FirstName, LastName, Major, Degree, GraduteSchool from Talent;
-
-# Information shows current job title
-Select Talent.FirstName, Talent.LastName, Employment_History.Position, Employment_History.JobField, Employment_History.StartDate,
-Employment_History.EndDate from Employment_History inner join Talent on Employment_History.PersonID = Talent.PersonID;
