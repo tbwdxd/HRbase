@@ -7,7 +7,7 @@ Bowen, Haoran, Songda, Tong.
 # This project is based on scrum.
 
 # By Songda
-
+The customer requirement is at 'Requirement' folder at CustomersRequirement.txt and will keep updating
 
 # By Haoran
 The ER diagram is at URL: https://www.draw.io/#G0B9mUD6sArHDxVUYzSHBNeXNyWjQ
