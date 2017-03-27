@@ -1,25 +1,30 @@
 import textract
 import re
 def main():
+	#calculate number of matching word in the original text
 
 	#split the original resume by space
 	text = textract.process('testDoc.doc')
 	finaltext = text.decode('UTF-8')
 	splitext = re.findall(r"[\w']+", finaltext)	#split is a list
-	dict_ = ["software engineer","Java","Electrical Engineering","HTML","System Engineer","Mechanical Engineering","Python","DOORS","team player","Chemistry","Tomatoes","League of Legends"]
-	#count store the matching words and their matching times
+#	dict_ = ["SoFtWARE EnGineer","Java","Electrical Engineering","HTML","System Engineer","Mechanical Engineering","Python","DOORS","team player","Chemistry","Tomatoes","League of Legends"]
+	dict_ = ["SoFtWARE EnGineer"]
 	result = {}													   #result is a dictionary
-	#calculate number of matching word in the original text
+
 	index_i = -1
 	for element in splitext:
 		index_i += 1
+		element = element.lower()								  #converse the word to all lower case in order to handle case insentitive
 		compare(element, dict_, splitext,index_i,result)
 	print('Matched keywords are as follows: ')
 	for key in result:
 		print ("Word: ",key, " Count: ",result[key])
 
-def compare(element, dict_, splitext,index_i,result):             #check if element is 'in' dict
+
+
+def compare(element, dict_, splitext, index_i, result):           #check if element is 'in' dict
 	for keyword in dict_:
+		keyword = keyword.lower()								  #converse the word to all lower case in order to handle case insentitive
 		newkeyword = keyword.split()
 		if(len(newkeyword) > 1):               					  #if current keyword is more than one word
 			if element == newkeyword[0]:						  #if the first word of the key word matched
@@ -41,8 +46,6 @@ def compare(element, dict_, splitext,index_i,result):             #check if elem
 					result[newkeyword[0]] = 1
 				else:
 					result[newkeyword[0]] += 1
-	#see if match, handle cap or non cap
-	
 
 if __name__ == '__main__':
 	main()
