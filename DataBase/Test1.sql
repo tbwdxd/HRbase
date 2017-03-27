@@ -4,7 +4,7 @@
 
 USE HRbase;
 
-# Insert Value in 'User' table
+# Insert Values in 'User' table
 # Permission number: 0->Admin, 1->Employee, 2->User
 INSERT INTO User 
 (EMail, Password, Permission)
@@ -35,21 +35,21 @@ VALUES
 
 # Insert Value in 'Employee' table
 INSERT INTO Employee 
-(PersonID, Department, WorkPhone, Position)
+(PersonID, LastName, FirstName, Department, WorkPhone, Position)
 VALUES
-(1, 'Engineering&Project Management','949-255-4190','Director'),
-(2, 'Engineering&Project Management','949-255-2262','Director'),
-(3, 'Engineering&Project Management','949-255-4197','Director'),
-(4, 'Engineering&Project Management','949-255-4159','Director');
+(1, 'Ma', 'Haoran', 'Engineering&Project Management','949-255-4190','Director'),
+(2, 'Zhang', 'Tong','Engineering&Project Management','949-255-2262','Director'),
+(3, 'Tian', 'Bowen','Engineering&Project Management','949-255-4197','Director'),
+(4, 'Cheng', 'Songda','Engineering&Project Management','949-255-4159','Director');
 
 # Insert Value in 'Comments' table
 INSERT INTO Comments 
-(PersonID, Comments)
+(PersonID, EmployeeID, Comments)
 VALUES
-(5, 'Good'),
-(6, 'Not Good'),
-(7, 'Not Good Enough'),
-(8, 'Good Enough');
+(5, 1, 'Good'),
+(6, 2, 'Not Good'),
+(7, 3, 'Not Good Enough'),
+(8, 4, 'Good Enough');
 
 # Insert Value in 'Company' table
 INSERT INTO Company (CompanyID, CompanyName, CompanyInf) 
@@ -89,9 +89,13 @@ inner join Company on Company.CompanyID = Employment_History.CompanyID
 where Talent.FirstName = 'Tom';
 
 #4 Query Tom's Comments
-Select Talent.FirstName, Talent.LastName, Comments.Comments from Talent 
-inner join Comments on Talent.PersonID = Comments.PersonID
+Select Talent.FirstName, Talent.LastName, Comments.Comments, Comments.EmployeeID from Comments 
+inner join Talent on Talent.PersonID = Comments.PersonID
+inner join Employee on Employee.EmployeeID = Comments.EmployeeID
 where Talent.FirstName = 'Tom';
 
 
 # SD require to test:
+Select * from Employment_History inner join Talent on Employment_History.PersonID = Talent.PersonID
+inner join Company on Employment_History.CompanyID = Company.CompanyID
+where FirstName = 'Tom' ;
