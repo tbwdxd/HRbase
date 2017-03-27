@@ -7,8 +7,8 @@ def main():
 	text = textract.process('testDoc.doc')
 	finaltext = text.decode('UTF-8')
 	splitext = re.findall(r"[\w']+", finaltext)	#split is a list
-#	dict_ = ["SoFtWARE EnGineer","Java","Electrical Engineering","HTML","System Engineer","Mechanical Engineering","Python","DOORS","team player","Chemistry","Tomatoes","League of Legends"]
-	dict_ = ["SoFtWARE EnGineer"]
+	dict_ = ["SoFtWARE EnGineer","Java","Electrical Engineering","HTML","System Engineer","Mechanical Engineering","Python","DOORS","team player","Chemistry","Tomatoes","League of Legends"]
+#	dict_ = ["SoFtWARE EnGineer"]								   #we'd better search the keyword one by one
 	result = {}													   #result is a dictionary
 
 	index_i = -1

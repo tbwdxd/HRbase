@@ -5,9 +5,9 @@
 #Version:0.1
 
 #Files:
-	1.xxxx.py  # for something - main program   >> main.py
-	2.xxxx.py  # it is just a small test        >> test.py
-	3.xxxx.py  # it is just for testing some functions, will remove
+	1.testInput.py  	# it is for test of using textract to convert original type 			 	# of file to txt 
+	2.testmatch.py  	# for test spliting words in the original file
+	3.testWordMatching.py  # it is just for testing key word matching function
 
 #Github Instruction
 1.Instruction for using github
@@ -18,23 +18,28 @@ b.git commit -a -m “comment”
 c.git push
 
 #Environment Setup
-
-#How to setup library for only Python 3 on Mac
-2.If I have installed both python2 and python3, how to use pip?
-当Python2和Python3同时存在于windows上时，它们对应的pip都叫pip.exe，所以不能够直接使用 pip install 命令来安装软件包。而是要使用启动器py.exe来指定pip的版本。
-windows
-命令如下：py -2 -m pip install XXXX-2 还是表示使用 Python2，-m pip 表示运行 pip 模块，也就是运行pip命令了。如果是为Python3安装软件，那么命令类似的变成py -3 -m pip install XXXX
+1.If I have installed both python2 and python3, how to use pip?
+When both python2 and python3 are on the windows, both of their pip are called pip.exe. So we can’t use pip install command to install software package. 
+Instead, we need to use py.exe to specify the version of pip.
+windows: 
+command: py -2 -m pip install XXXX-2 (python2)
+	  -m means executes pip module
+         py -3 -m pip install XXXX   (python3)
 linux
 sudo pip2 install sth
 sudo pip3 install sth
 
-3.Reference: https://github.com/deanmalmgren/textract documentation
+2.Reference: https://github.com/deanmalmgren/textract
+install in OSX
+2.1  install homebrew
+2.2  cask plugin: (command) brew install caskroom/cask/brew-cask
+2.3  install XQuartz & install textract:
+	brew cask install xquartz
+	brew install poppler antiword unrtf tesseract
+	pip install textract
 
-1
-2
-3
-4
+3.how to use extract to extract information from doc/docx/pdf…
+import textract
+text = textract.process('path/to/file.extension')
 
 
-#Use Case:
-Command Line: test.py [Arg1 Arg2]
