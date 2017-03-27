@@ -18,7 +18,10 @@ The Data Flow diagram at URL: https://www.draw.io/?state=%7B%22ids%22:%5B%220B9m
 
 
 # By Zhangtong
-
+The program of the HR-base is in the Program folder which will keep updating
+textInput.py is for traversing the doc/docx/pdf format of file to txt format
+textWordMatching.py is for key word matching function 
+testDoc testDocx test.pdf are test files
 
 # By Bowen
 You can find the backlogs at URL: https://drive.google.com/open?id=0B8FqTHNeorKldE1FdTJnMDVDVU0
