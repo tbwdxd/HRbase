@@ -5,7 +5,7 @@
 #Version:0.1
 
 #Files:
-	1.testInput.py  	# it is for test of using textract to convert original type 			 	# of file to txt 
+	1.testInput.py  	# it is for test of using textract to convert original  			 	# type of file to txt 
 	2.testmatch.py  	# for test spliting words in the original file
 	3.testWordMatching.py  # it is just for testing key word matching function
 

@@ -1,21 +1,36 @@
+#Note - Data Processor for HRbase
+#Author: Tong(Jenny)
+#Last Modified:03/22/2017
+#Platform: Python 3
+#Version:0.1
+#Usage: python3 testWordMatching.py FINAME.EXTENTION  DICT.json
+
+import sys
 import textract
 import re
-def main():
+import ujson
+def main(argv):
 	#calculate number of matching word in the original text
 
 	#split the original resume by space
-	text = textract.process('testDoc.doc')
+	filename = argv[0]
+	dictfile = argv[1]
+	text = textract.process(filename)
 	finaltext = text.decode('UTF-8')
 	splitext = re.findall(r"[\w']+", finaltext)	#split is a list
-	dict_ = ["SoFtWARE EnGineer","Java","Electrical Engineering","HTML","System Engineer","Mechanical Engineering","Python","DOORS","team player","Chemistry","Tomatoes","League of Legends"]
-#	dict_ = ["SoFtWARE EnGineer"]								   #we'd better search the keyword one by one
+	#ujson
+	with open(dictfile) as file_stream:
+		dict_= ujson.load(file_stream)
+	#now dict_ is a dictionary, make it as a list of strings
+	dict_ = dict_["dict"]
+	#dict_ = ["SoFtWARE EnGineer","Java","Electrical Engineering","HTML","System Engineer","Mechanical Engineering","Python","DOORS","team player","Chemistry","Tomatoes","League of Legends"]
 	result = {}													   #result is a dictionary
 
 	index_i = -1
 	for element in splitext:
 		index_i += 1
 		element = element.lower()								  #converse the word to all lower case in order to handle case insentitive
-		compare(element, dict_, splitext,index_i,result)
+		compare(element, dict_, splitext, index_i, result)
 	print('Matched keywords are as follows: ')
 	for key in result:
 		print ("Word: ",key, " Count: ",result[key])
@@ -48,4 +63,4 @@ def compare(element, dict_, splitext, index_i, result):           #check if elem
 					result[newkeyword[0]] += 1
 
 if __name__ == '__main__':
-	main()
+	main(sys.argv[1:])
