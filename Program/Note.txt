@@ -3,9 +3,15 @@
 #Last Modified:03/22/2017
 #Platform: Python 3
 #Version:0.1
+#Usage: python3 testWordMatching.py
+
 
 #Files:
+<<<<<<< HEAD
 	1.testInput.py  	# it is for test of using textract to convert original  			 	# type of file to txt 
+=======
+	1.testInput.py  	# it is for test of using textract to convert original type of file to txt 
+>>>>>>> 5e7ef61e7461216ec2026b5b725b1143be9e46c0
 	2.testmatch.py  	# for test spliting words in the original file
 	3.testWordMatching.py  # it is just for testing key word matching function
 
@@ -18,27 +24,31 @@ b.git commit -a -m “comment”
 c.git push
 
 #Environment Setup
-1.If I have installed both python2 and python3, how to use pip?
+
+>>How to use pip to manage python3 when have python3 and python2
+
 When both python2 and python3 are on the windows, both of their pip are called pip.exe. So we can’t use pip install command to install software package. 
 Instead, we need to use py.exe to specify the version of pip.
-windows: 
+
+----windows-----------------------------------------
 command: py -2 -m pip install XXXX-2 (python2)
 	  -m means executes pip module
          py -3 -m pip install XXXX   (python3)
-linux
+----linux-------------------------------------------
 sudo pip2 install sth
 sudo pip3 install sth
 
-2.Reference: https://github.com/deanmalmgren/textract
-install in OSX
-2.1  install homebrew
-2.2  cask plugin: (command) brew install caskroom/cask/brew-cask
-2.3  install XQuartz & install textract:
+----Mac OSX-----------------------------------------
+Reference: https://github.com/deanmalmgren/textract
+
+1  install homebrew
+2  cask plugin: (command) brew install caskroom/cask/brew-cask
+3  install XQuartz & install textract:
 	brew cask install xquartz
 	brew install poppler antiword unrtf tesseract
 	pip install textract
 
-3.how to use extract to extract information from doc/docx/pdf…
+#how to use extract in python
 import textract
 text = textract.process('path/to/file.extension')
 

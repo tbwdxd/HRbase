@@ -26,3 +26,5 @@ testDoc testDocx test.pdf are test files
 
 # By Bowen
 You can find the backlogs at URL: https://drive.google.com/open?id=0B8FqTHNeorKldE1FdTJnMDVDVU0
+
+Current Scrum Passed: 2
