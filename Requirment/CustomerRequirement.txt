@@ -123,4 +123,16 @@ Also, the interface needs to offer the options that can help users to get their 
   as format fnfdvbh@hsbls.server, not some shitty format like ;dfufvbhs;.vjdskv or else).
   The system should allow the external users to upload their resumes 
 
-# The viewing system should allow internal users to check applicants' resumes by clicking their names.
+                                                                                                                     -- 03/28/2017
+
+
+
+#  Password length: at least 8 characters
+   should alert any users if the password does not meet the requirement( any kinds of the error)
+   And also should have alerts when the type in does not meet the requirement of the section it needs(e.g genders show no male or female, it has to come up with an error alert)
+   Add a column for applicants putting their personal requests for the job. 
+   The link to the person should also have the section to show their personal requests from the column.
+   Show a message after the applicant successfully register to the system
+    
+# The viewing system should allow internal users to check applicants' resumes by clicking applicants' names.   
+  
