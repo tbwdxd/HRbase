@@ -155,3 +155,5 @@ Also, the interface needs to offer the options that can help users to get their 
 
 # Links to company website and contact information of the company
   Make the outlook of the page more beautiful
+  delete the "Age" column 
+  Requires at least 8 characters, 1 upper case and 1 lower case in order to make the password valid. 
