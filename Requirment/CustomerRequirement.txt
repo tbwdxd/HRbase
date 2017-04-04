@@ -146,6 +146,8 @@ Also, the interface needs to offer the options that can help users to get their 
      -Submission Date
      -US citizen or not
      -Working Field(alphbetically)
-     -Age?
+     -Age?                                                                                                        -- 03/31/2017
 
-#
+
+# Make sure evevry page shows 20 results of searching, and allow the users to flip pages
+  Also, every page should shows the number of the page at the bottom of the page( page 1, page 2....)
