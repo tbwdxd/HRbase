@@ -150,4 +150,7 @@ Also, the interface needs to offer the options that can help users to get their 
 
 
 # Make sure evevry page shows 20 results of searching, and allow the users to flip pages
-  Also, every page should shows the number of the page at the bottom of the page( page 1, page 2....)
+  Also, every page should shows the number of the page at the bottom of the page( page 1, page 2....)             -- 04/03/2017
+
+
+# Links to company website and contact information of the company
