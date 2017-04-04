@@ -154,3 +154,4 @@ Also, the interface needs to offer the options that can help users to get their 
 
 
 # Links to company website and contact information of the company
+  Make the outlook of the page more beautiful
