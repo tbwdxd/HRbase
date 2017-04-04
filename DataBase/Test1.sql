@@ -6,7 +6,7 @@ USE HRbase;
 
 # Insert Values in 'User' table
 # Permission number: 0->Admin, 1->Employee, 2->User
-INSERT INTO User 
+INSERT INTO Users 
 (EMail, Password, Permission)
 VALUES
 ('haoranma@gmail.com','12345','1'),
@@ -24,14 +24,14 @@ INSERT INTO Talent
 (PersonID, LastName, FirstName, Age, LivingArea, CellPhone, DirectPhone, Major, HighestDegree, GraduteSchool, 
 	Citizen, SubmissionDate, Source, LinkedIn, ResumeLocation,  KeyWord)
 VALUES 
-(5, "A", "Apple", 25, "California", "626-478-5299","","Electrical Engineering", "PhD", "Standford", "Yes", 
-	"2016-6-1", "Internal","","","Electrical, Engineering, System Engineering"),
-(6, "B", "Jack", 27, "California", "","","Computer Science", "PhD", "Standford", "Yes", 
-	"2016-6-1", "Internal","","","Computer Science, Java, Python"),
-(7, "C", "Tom", 24, "California", "","","Chemistry", "PhD", "Standford", "Yes", 
-	"2016-6-1", "Internal","","","Chemistry, Requirement Analysis"),
-(8, "D", "Kay", 25, "California", "","","Electrical Engineering", "PhD", "Standford", "Yes", 
-	"2016-6-1", "Internal","","","Electrical Engineering, Machine Learning");
+(5, 'A', 'Apple', 25, 'California', '626-478-5299','','Electrical Engineering', 'PhD', 'Standford', 'Yes', 
+	'2016-6-1', 'Internal','','','Electrical, Engineering, System Engineering'),
+(6, 'B', 'Jack', 27, 'California', '','','Computer Science', 'PhD', 'Standford', 'Yes', 
+	'2016-6-1', 'Internal','','','Computer Science, Java, Python'),
+(7, 'C', 'Tom', 24, 'California', '','','Chemistry', 'PhD', 'Standford', 'Yes', 
+	'2016-6-1', 'Internal','','','Chemistry, Requirement Analysis'),
+(8, 'D', 'Kay', 25, 'California', '','','Electrical Engineering', 'PhD', 'Standford', 'Yes', 
+	'2016-6-1', 'Internal','','','Electrical Engineering, Machine Learning');
 
 # Insert Value in 'Employee' table
 INSERT INTO Employee 
@@ -54,18 +54,18 @@ VALUES
 # Insert Value in 'Company' table
 INSERT INTO Company (CompanyID, CompanyName, CompanyInf) 
 VALUES 
-(1, "COMAC America Corporation", "OMG"),
-(2, "Apple", "GG"),
-(3, "FAA", "Secret"),
-(4, "Google", "MM");
+(1, 'COMAC America Corporation', 'OMG'),
+(2, 'Apple', 'GG'),
+(3, 'FAA', 'Secret'),
+(4, 'Google', 'MM');
 
 # Insert Value in 'Employment_History' table
 INSERT INTO Employment_History (EmploymentID, PersonID, CompanyID, WorkingField, Position, StartDate, EndDate, JobExp)
 VALUES 
-(1,5,1,"EE","Director","2016-5-19","2017-5-19","No"),
-(2,6,2,"CS","Director","2016-5-19","2017-5-19","No"),
-(3,7,3,"CE","Director","2016-5-19","2017-5-19","No"),
-(4,8,4,"EE","Director","2016-5-19","2017-5-19","No");
+(1,5,1,'EE','Director','2016-5-19','2017-5-19','No'),
+(2,6,2,'CS','Director','2016-5-19','2017-5-19','No'),
+(3,7,3,'CE','Director','2016-5-19','2017-5-19','No'),
+(4,8,4,'EE','Director','2016-5-19','2017-5-19','No');
 
 #Test Case:
 #1. Verify Haoran Login and password
