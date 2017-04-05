@@ -1,20 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace WebApplication3
 {
+
     public partial class _Default : Page
     {
         public string result;
+
+        public string conString = "Data Source=DESKTOP-FTCTJD0\\SQLEXPRESS;Initial Catalog=HRbase;Integrated Security=True";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            //call python, return vaue
-            //声明一个程序信息类
-            System.Diagnostics.ProcessStartInfo Info = new System.Diagnostics.ProcessStartInfo();
+        
+        //call python, return vaue
+        //声明一个程序信息类
+        System.Diagnostics.ProcessStartInfo Info = new System.Diagnostics.ProcessStartInfo();
             //设置外部程序名
             Info.FileName = "ASP_testAddNum.exe";
             //设置外部程序的启动参数（命令行参数）为test.txt
@@ -52,6 +63,31 @@ namespace WebApplication3
             }
             Console.WriteLine("外部程序的结束运行时间：{0}", Proc.ExitTime);
             Console.WriteLine("外部程序在结束运行时的返回值：{0}", Proc.ExitCode);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(conString);
+                conn.Open();
+                if (conn.State == System.Data.ConnectionState.Open)
+                {
+                    string q = "insert into Users (EMail, Password, Permission) values ('"+txtemail.Text.ToString()+"','"+txtpassword.Text.ToString()+"','"+txtpermission.Text.ToString()+"')";
+                    SqlCommand cmd = new SqlCommand(q,conn);
+                    cmd.ExecuteNonQuery();
+
+                    Response.Write("Successful");
+                    conn.Close();
+                }
+                
+                
+                
+            }
+            catch(Exception ex)
+            {
+                Response.Write("Error:"+ex.ToString());
+            }
         }
     }
 }
