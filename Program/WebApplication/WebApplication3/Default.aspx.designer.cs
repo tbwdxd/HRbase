@@ -13,6 +13,15 @@ namespace WebApplication3 {
     public partial class _Default {
         
         /// <summary>
+        /// resultA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal resultA;
+        
+        /// <summary>
         /// txtemail control.
         /// </summary>
         /// <remarks>
