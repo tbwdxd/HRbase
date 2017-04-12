@@ -30,7 +30,7 @@ CREATE TABLE Employee (EmployeeID INT NOT NULL identity(1,1), PersonID INT NOT N
 
 #3.4 In the 'Comments' table, the primary key is 'CommentID', foreign key is 'PersonID' and 'EmployeeID'
 CREATE TABLE Comments (CommentID INT NOT NULL identity(1,1), PersonID INT, EmployeeID INT, Comments VARCHAR(255), 
-	PRIMARY KEY(CommentID), FOREIGN KEY(PersonID) REFERENCES User(PersonID), 
+	PRIMARY KEY(CommentID), FOREIGN KEY(PersonID) REFERENCES Users(PersonID), 
 	FOREIGN KEY(EmployeeID) REFERENCES Employee(EmployeeID));
 
 #3.5 In 'Company' table, the primary key is 'CompanyID'
