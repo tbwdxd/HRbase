@@ -5,6 +5,8 @@
     <div class="jumbotron">
         <h1>DataBase</h1>
         <asp:Literal runat="server" id="resultA" EnableViewState="false" />
+        <br />
+
     <form action="test-3.html">
 	E-mail:&nbsp;
         <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>

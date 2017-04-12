@@ -14,7 +14,7 @@ USE HRbase;
 #3.1 In the 'User' table, we define 'PersonID' as the primary key, and increase Person ID number automatically withour 
 #    typing anything. 'EMail' is also primary key, cannot null and repeat. 
 CREATE TABLE Users (PersonID INT NOT NULL identity(1,1), EMail VARCHAR(30) NOT NULL, Password VARCHAR(30) NOT NULL, 
-	Permission INT NOT NULL, PRIMARY KEY(PersonID, EMail));
+	Permission INT NOT NULL, PRIMARY KEY(PersonID));
 
 #3.2 In 'Talent' table , the primary key is 'TalentID', foreign key is 'PersonID'
 CREATE TABLE Talent (TalentID INT NOT NULL identity(1,1), PersonID INT NOT NULL, LastName VARCHAR(50) NOT NULL, 

@@ -9,10 +9,15 @@ import sys
 import textract
 import re
 import ujson
+
+
+
 def main(argv):
 	#calculate number of matching word in the original text
 
 	#split the original resume by space
+
+	
 	filename = argv[0]
 	dictfile = argv[1]
 	text = textract.process(filename)

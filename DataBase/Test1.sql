@@ -69,7 +69,7 @@ VALUES
 
 #Test Case:
 #1. Verify Haoran Login and password
-Select EMail, Password, Permission from User where EMail = 'haoranma@gmail.com';
+Select EMail, Password, Permission from Users where EMail = 'haoranma@gmail.com';
 
 #2. Query Tom's personal information
 Select LastName, FirstName, Age, Major, HighestDegree, GraduteSchool 
