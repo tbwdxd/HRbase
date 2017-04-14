@@ -34,7 +34,7 @@ namespace WebApplication3
                 string password = passcmd.ExecuteScalar().ToString().Replace(" ","");
                 if(password == txtpassword.Text)
                 {
-                    Session["New"] = txtemail.Text;
+                    Session[txtemail.Text] = 9;
                     Response.Write("Password is correct");
                 }
                 else

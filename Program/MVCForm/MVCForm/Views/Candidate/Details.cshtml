@@ -1,0 +1,51 @@
+﻿@model MVCForm.Models.Candidate
+
+@{
+    ViewBag.Title = "Candidates Details";
+}
+
+<h2>Candidates Details</h2>
+
+<!-- This table is for Candidate Detail -->
+<table style="font-family: Arial"
+       <tr>
+           <td>
+               <b>LastName</b>
+           </td>
+           <td>
+               <b>FirstName</b>
+           </td>
+           <td>
+               <b>Age</b>
+           </td>
+           <td>
+               <b>LivingArea</b>
+           </td>
+           <td>
+               <b>Major</b>
+           </td>
+           <td>
+               <b>CellPhone</b>
+           </td>
+       </tr>
+       <tr>
+           <td>
+               @Model.LastName
+           </td>
+           <td>
+               @Model.FirstName
+           </td>
+           <td>
+               @Model.Age
+           </td>
+           <td>
+               @Model.LivingArea
+           </td>
+           <td>
+               @Model.Major
+           </td>
+           <td>
+              @Model.CellPhone
+           </td>
+       </tr>
+</table>
