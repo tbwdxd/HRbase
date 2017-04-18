@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['testWordMatching.py'],
-             pathex=['C:\\Users\\COMACDEV\\Desktop\\HRbase\\Program'],
+             pathex=['C:\\Users\\COMACIT\\Desktop\\HRbase\\Program'],
              binaries=[],
              datas=[],
              hiddenimports=[],
