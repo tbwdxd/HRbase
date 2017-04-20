@@ -27,17 +27,9 @@ namespace MVCForm.Controllers
 
             return View();
         }
-    }
-    public class ViewController : Controller //This controller is for view resume when pressing the button
-    {
-
-        //data databasedata; //this is for database return data
-        //printtableview();//this is for create a data base query 
-    }
-
-    public class DownloadController : Controller //This controller is for download resume when pressing the button
-    {
 
     }
+
+
 
 }
