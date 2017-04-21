@@ -5,13 +5,14 @@ using System.Web;
 using System.Text;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
+using Newtonsoft.Json.Linq;
 
 namespace MVCForm.Models
 {
     public class WordMatching
     {
         private textParser parser = new textParser();
-        private JSON Dict;
+        private JObject Dict;
         private string Doc;
         public void matching(string[] args)
         {
