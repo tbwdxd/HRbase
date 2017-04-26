@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HRbaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="CommentID" />
+    </Key>
+    <Property Name="CommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="Int32" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Comments__Employ__2C3393D0" FromRole="Comments" ToRole="Employee" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Comments__Person__2B3F6F97" FromRole="Comments" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyInf" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employment_History" Relationship="Self.FK__Employmen__Compa__31EC6D26" FromRole="Company" ToRole="Employment_History" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="Int32" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WorkPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__Employ__2C3393D0" FromRole="Employee" ToRole="Comments" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Employee__Person__286302EC" FromRole="Employee" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Employment_History">
+    <Key>
+      <PropertyRef Name="EmploymentID" />
+    </Key>
+    <Property Name="EmploymentID" Type="Int32" Nullable="false" />
+    <Property Name="PersonID" Type="Int32" Nullable="false" />
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="WorkingField" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="JobExp" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Company" Relationship="Self.FK__Employmen__Compa__31EC6D26" FromRole="Employment_History" ToRole="Company" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Employmen__Perso__30F848ED" FromRole="Employment_History" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Talent">
+    <Key>
+      <PropertyRef Name="TalentID" />
+    </Key>
+    <Property Name="TalentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="Int32" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="LivingArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CellPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DirectPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Major" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HighestDegree" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GraduteSchool" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Citizen" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SubmissionDate" Type="DateTime" Precision="0" />
+    <Property Name="Source" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LinkedIn" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ResumeLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="KeyWord" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Talent__PersonID__25869641" FromRole="Talent" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Permission" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__Person__2B3F6F97" FromRole="Users" ToRole="Comments" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__Person__286302EC" FromRole="Users" ToRole="Employee" />
+    <NavigationProperty Name="Employment_History" Relationship="Self.FK__Employmen__Perso__30F848ED" FromRole="Users" ToRole="Employment_History" />
+    <NavigationProperty Name="Talents" Relationship="Self.FK__Talent__PersonID__25869641" FromRole="Users" ToRole="Talent" />
+  </EntityType>
+  <Association Name="FK__Comments__Employ__2C3393D0">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comments__Person__2B3F6F97">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employmen__Compa__31EC6D26">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Employment_History" Type="Self.Employment_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="Employment_History">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__Person__286302EC">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employmen__Perso__30F848ED">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Employment_History" Type="Self.Employment_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Employment_History">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Talent__PersonID__25869641">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Talent" Type="Self.Talent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Talent">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HRbaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Comments" EntityType="Self.Comment" />
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Employment_History" EntityType="Self.Employment_History" />
+    <EntitySet Name="Talents" EntityType="Self.Talent" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Comments__Employ__2C3393D0" Association="Self.FK__Comments__Employ__2C3393D0">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comments__Person__2B3F6F97" Association="Self.FK__Comments__Person__2B3F6F97">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employmen__Compa__31EC6D26" Association="Self.FK__Employmen__Compa__31EC6D26">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Employment_History" EntitySet="Employment_History" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__Person__286302EC" Association="Self.FK__Employee__Person__286302EC">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employmen__Perso__30F848ED" Association="Self.FK__Employmen__Perso__30F848ED">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Employment_History" EntitySet="Employment_History" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Talent__PersonID__25869641" Association="Self.FK__Talent__PersonID__25869641">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Talent" EntitySet="Talents" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

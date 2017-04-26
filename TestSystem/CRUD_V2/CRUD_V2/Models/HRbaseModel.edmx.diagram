@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4d1bed6df0d4395a1da38b9e7d231cd" Name="Diagram1">
+        <EntityTypeShape EntityType="HRbaseModel.Comment" Width="1.5" PointX="9.375" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRbaseModel.Company" Width="1.5" PointX="13.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRbaseModel.Employee" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRbaseModel.Employment_History" Width="1.5" PointX="11.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRbaseModel.Talent" Width="1.5" PointX="4.625" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRbaseModel.User" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="HRbaseModel.FK__Comments__Employ__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="HRbaseModel.FK__Comments__Person__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="HRbaseModel.FK__Employmen__Compa__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="HRbaseModel.FK__Employee__Person__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="HRbaseModel.FK__Employmen__Perso__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="HRbaseModel.FK__Talent__PersonID__25869641" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

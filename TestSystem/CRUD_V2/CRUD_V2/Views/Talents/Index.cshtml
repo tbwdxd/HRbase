@@ -1,0 +1,135 @@
+﻿@model IEnumerable<CRUD_V2.Models.Talent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LivingArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CellPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DirectPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Major)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighestDegree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GraduteSchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Citizen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubmissionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkedIn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResumeLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KeyWord)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.EMail)
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LivingArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CellPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DirectPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Major)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighestDegree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GraduteSchool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Citizen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubmissionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Source)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LinkedIn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResumeLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KeyWord)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.EMail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TalentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TalentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TalentID })
+        </td>
+        <td>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @using (Html.BeginForm("Upload", "Talents", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                        <input type="file" , name="file" id="file" />
+                        <input type="submit", value="Upload" />
+                    }
+                </div>
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>COMAC America Corporation</h1>
+    <p class="lead">HRbase Testing</p>
+    <p><a href="http://english.comac.cc/" class="btn btn-primary btn-lg">Company Web Page &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Users","Index","Users")</h2>
+        <p>
+            <b>New User</b> Sign-Up
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index","Users")">Sign Up &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Employees", "Index", "Employees")</h2>
+        <p>After User Sign-up, you can update <b>Employee</b> information</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index","Employees")">Update &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Talents", "Index", "Talents")</h2>
+        <p>After User Sign-up, you can update <b>Talents</b> information</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index","Talents")">Update &raquo;</a></p>
+    </div>
+</div>
